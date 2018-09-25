@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    // buildToolsVersion '27.0.3'
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 56
         versionName '3.0.3'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -39,7 +39,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.android.tools.build:gradle:3.1.4'
         //classpath 'io.realm:realm-gradle-plugin:0.88.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -51,6 +51,8 @@ repositories {
     maven { // this is for realm-db
         url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
     }
+    maven { url "http://repo1.maven.org/maven2" }
+    jcenter { url "http://jcenter.bintray.com/"}
 }
 
 dependencies {
@@ -59,7 +61,7 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
 
     implementation project(':MPChartLib')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     //compile 'io.realm:realm-android:0.87.5' // dependency for realm-database API (http://realm.io)
     //compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
 }
